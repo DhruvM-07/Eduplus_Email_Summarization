@@ -20,7 +20,7 @@ st.set_page_config(
 
 # Load environment variables
 load_dotenv()
-groq_api_key="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"
+groq_api_key=os.getenv("Secret_Key")
 
 def load_llm():
     return ChatGroq(temperature=0.4, model_name="llama3-8b-8192", api_key=groq_api_key)
